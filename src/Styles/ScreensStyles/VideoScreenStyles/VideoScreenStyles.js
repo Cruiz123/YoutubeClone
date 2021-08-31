@@ -1,6 +1,9 @@
 import { Colors, RFValue } from "../../../Utils/constants"
 
 export default {
+    containerPrincipal: {
+        flex: 1,
+    },
     videoPlayer: {
         width: "100%",
         aspectRatio: 16 / 9,
@@ -71,5 +74,33 @@ export default {
     subscribers: {
         color: Colors.colorGray,
         fontSize: RFValue(18),
+    },
+    containerComments: {
+        // flex: 1,
+        padding: RFValue(10),
+        marginVertical: RFValue(10),
+        // backgroundColor: "red",
+    },
+    titleComments: {
+        color: Colors.colorWhite,
+        fontSize: RFValue(12),
+    },
+    containerUsercomments: {
+        // flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        // justifyContent: "space-between",
+        marginHorizontal: RFValue(5),
+    },
+    avatarComments: {
+        width: RFValue(35),
+        height: RFValue(35),
+        borderRadius: RFValue(20),
+    },
+    titleInfoCommets: {
+        color: Colors.colorWhite,
+        fontSize: RFValue(12),
+        fontWeight: "bold",
+        marginLeft: RFValue(10),
     },
 }
