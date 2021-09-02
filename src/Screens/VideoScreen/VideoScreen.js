@@ -9,15 +9,14 @@ import {
 } from "react-native"
 
 // Import Data
+import Video from "../../Assets/Data/videos.json"
 import dataVideo from "../../Assets/Data/video.json"
 
 // Import Components
 import Icon from "react-native-vector-icons/AntDesign"
 import { Colors, RFValue } from "../../Utils/constants"
 import VideoListItem from "../../components/VideoListItem/VideoListItem"
-
-// Import Data
-import Video from "../../Assets/Data/videos.json"
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer"
 
 // Import Hooks
 import useStyles from "../../Hooks/useStyles.hook"
@@ -40,12 +39,13 @@ const VideoScreen = () => {
 
     return (
         <View style={styles.containerPrincipal}>
-            <Image
+            {/* <Image
                 style={styles.videoPlayer}
                 source={{
                     uri: dataVideo.thumbnail,
                 }}
-            />
+            /> */}
+            <VideoPlayer data={dataVideo.videoUrl} />
 
             <View style={styles.videoInfoContainer}>
                 <Text style={styles.tags}>{dataVideo.tags}</Text>
